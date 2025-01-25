@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template version="0.2">
+    <title xml:lang="ko">아포리아 헤더</title>
+    <title xml:lang="en">Aporia Header</title>
+    <description xml:lang="ko">배경 이미지가 반응형으로 변하는 헤더 템플릿입니다.</description>
+    <description xml:lang="en">A header template that the background image change itself responsively.</description>
+    <version>0.1</version>
+    <date>2018-06-13</date>
+
+    <author email_address="cydemo@gmail.com" link="https://www.xetown.com/">
+        <name xml:lang="ko">cydemo</name>
+        <name xml:lang="en">cydemo</name>
+    </author>
+	
+	<admin>Y</admin>
+	<type>
+		<full_page>N</full_page>
+		<header>Y</header>
+		<section>N</section>
+		<footer>N</footer>
+	</type>
+</template>

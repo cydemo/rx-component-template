@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template version="0.2">
+    <title xml:lang="ko">지금은 소녀시대</title>
+    <title xml:lang="en">Now, Girl's Generation</title>
+    <description xml:lang="ko">헤더, 3개의 섹션, 푸터로 구성된 템플릿입니다.</description>
+    <description xml:lang="en">Header, three sections, and footers.</description>
+    <version>0.1</version>
+    <date>2018-06-13</date>
+
+    <author email_address="cydemo@gmail.com" link="https://www.xetown.com/">
+        <name xml:lang="ko">cydemo</name>
+        <name xml:lang="en">cydemo</name>
+    </author>
+	
+	<admin>Y</admin>
+	<type>
+		<full_page>Y</full_page>
+		<header>N</header>
+		<section>N</section>
+		<footer>N</footer>
+	</type>
+</template>

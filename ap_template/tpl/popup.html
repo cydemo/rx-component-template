@@ -1,0 +1,84 @@
+{@
+	Context::addMetaTag('viewport', 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0');
+}
+<load target="popup.js" />
+<load target="popup.css" />
+<load target="../lang" />
+
+<form action="./" method="get" class="ap_template {$editor_skin}" onSubmit="return false;">
+
+	<h1>{$component_info->title}</h1>
+
+	<div class="template_category">
+		<select class="template_category_menu" onchange="location.href=jQuery(this).val(); return false;">
+			<option value="{getUrl('type', '', 'page', '')}">{$lang->cmd_view_all}</option>
+			<option loop="$lang->tpl_type => $key, $cate" value="{getUrl('type', $key, 'page', '')}" selected="selected"|cond="isset($type) && $key === $type">{$cate}</option>
+		</select>
+		<img src="https://icons.simplesvg.com/fa-caret-down.svg?color=white&height=14&inline=true">
+	</div>
+
+	<ul class="template_list" cond="!$template_list">
+		<li class="no_template">
+			<strong>{$lang->msg_no_template}</strong>
+		</li>
+	</ul>
+
+	<ul class="template_list" cond="$template_list">
+		<li class="template" loop="$template_list => $key, $tpl" id="{$tpl->dir}" title="{$tpl->desc}"|cond="!Mobile::isMobileCheckByAgent()">
+			<strong>{ucfirst($tpl->title)}</strong>
+			<div class="thumb"><img src="{$tpl->thumb}" /></div>
+			<small>by <a href="{$tpl->link}" target="_blank">{$tpl->author}</a></small>
+			<div class="desc" cond="Mobile::isMobileCheckByAgent()">
+				<p>
+					<a href="#" class="btn">{$lang->cmd_insert}</a>
+					<a href="#" class="btn">{$lang->cmd_close}</a>
+				</p>
+				<p><small>{$tpl->desc}</small></p>
+			</div>
+		</li>
+	</ul>
+
+	<input type="hidden" name="template" value="" />
+
+	<div class="template_navi" cond="$page_navigation">
+		{@
+			$prev_page = max($page-1, 1);
+			$next_page = min($page+1, $page_navigation->last_page);
+		}
+		<ul>
+			<li>
+				<a class="prev" cond="$page != $prev_page" href="{getUrl('page', $prev_page)}">< {ucfirst($lang->cmd_prev)}</a>
+			</li>
+			<li>
+				<span cond="$page == 1" >1</span>
+				<a cond="$page != 1" href="{getUrl('page', '')}" title="{$lang->first_page}">1</a>
+			</li>
+			<span cond="$page>($page_navigation->page_count)/2+2">...</span>
+			<li loop="$page_no = $page_navigation->getNextPage()" cond="$page_no != 1 && $page_no != $page_navigation->last_page">
+				<span cond="$page == $page_no" >{$page_no}</span>
+				<a cond="$page != $page_no" href="{getUrl('page', $page_no)}">{$page_no}</a>
+			</li>
+			<span cond="($page+($page_navigation->page_count+1)/2<$page_navigation->last_page) && ($page_navigation->page_count+1<$page_navigation->last_page)">...</span>
+			<li cond="$page_navigation->last_page != 1">
+				<span cond="$page == $page_navigation->last_page" >{$page_navigation->last_page}</span>
+				<a cond="$page != $page_navigation->last_page" href="{getUrl('page', $page_navigation->last_page)}" title="{$lang->last_page}">{$page_navigation->last_page}</a>
+			</li>
+			<li>
+				<a class="next" cond="$page != $next_page" href="{getUrl('page', $next_page)}">{ucfirst($lang->cmd_next)} ></a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="template_command">
+		<a href="#" class="btn">{$lang->cmd_insert}</a>
+		<a href="#" class="btn">{$lang->cmd_overwrite}</a>
+		<a href="#" class="btn">{$lang->cmd_close}</a>
+	</div>
+
+</form>
+
+<script>
+	var is_mobile = '{Mobile::isMobileCheckByAgent()}';
+	var msg_not_support = '{$lang->msg_not_support}';
+	var msg_select = '{$lang->msg_select}';
+</script>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template version="0.2">
+    <title xml:lang="ko">아포리아 푸터</title>
+    <title xml:lang="en">Aporia Footer</title>
+    <description xml:lang="ko">사이트 제목, 구독 관련 메뉴, 저작권 표기, 연락처, 사이트 소개, 소셜 미디어 링크가 포함된 푸터 템플릿입니다.</description>
+    <description xml:lang="en">A footer template composed of site title, subscribe menu, copyright, contact, and social media link.</description>
+    <version>0.1</version>
+    <date>2018-06-13</date>
+
+    <author email_address="cydemo@gmail.com" link="https://www.xetown.com/">
+        <name xml:lang="ko">cydemo</name>
+        <name xml:lang="en">cydemo</name>
+    </author>
+	
+	<admin>Y</admin>
+	<type>
+		<full_page>N</full_page>
+		<header>N</header>
+		<section>N</section>
+		<footer>Y</footer>
+	</type>
+</template>

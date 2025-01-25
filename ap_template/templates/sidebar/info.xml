@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template version="0.2">
+    <title xml:lang="ko">사이드바 템플릿</title>
+    <title xml:lang="en">Sidebar Template</title>
+    <description xml:lang="ko">헤더, 텍스트와 사이드바 메뉴 섹션으로 구성된 템플릿입니다.</description>
+    <description xml:lang="en">Header, two sections that have texts and sidebar menu.</description>
+    <version>0.1</version>
+    <date>2018-06-13</date>
+
+    <author email_address="cydemo@gmail.com" link="https://www.xetown.com/">
+        <name xml:lang="ko">cydemo</name>
+        <name xml:lang="en">cydemo</name>
+    </author>
+	
+	<admin>N</admin>
+	<type>
+		<full_page>Y</full_page>
+		<header>N</header>
+		<section>N</section>
+		<footer>N</footer>
+	</type>
+</template>

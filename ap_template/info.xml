@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component version="0.2">
+    <title xml:lang="ko">템플릿</title>
+    <description xml:lang="ko">에디터 내에 지정된 템플릿을 불러와서 편집할 수 있습니다.</description>
+    <version>0.2.0</version>
+    <date>2025-01-25</date>
+
+    <author email_address="cydemo@aporai.blog" link="https://dev.aporia.blog/">
+        <name xml:lang="ko">윤삼</name>
+    </author>
+</component>

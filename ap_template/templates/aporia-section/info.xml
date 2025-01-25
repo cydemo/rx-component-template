@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template version="0.2">
+    <title xml:lang="ko">아포리아 중앙정렬 섹션</title>
+    <title xml:lang="en">Section Template Centered</title>
+    <description xml:lang="ko">중앙 정렬된 이미지, 요약문, 더보기 링크로 구성된 섹션 템플릿입니다.</description>
+    <description xml:lang="en">A section template with an image, summary and a read-more link.</description>
+    <version>0.1</version>
+    <date>2018-06-14</date>
+
+    <author email_address="cydemo@gmail.com" link="https://www.xetown.com/">
+        <name xml:lang="ko">cydemo</name>
+        <name xml:lang="en">cydemo</name>
+    </author>
+	
+	<admin>N</admin>
+	<type>
+		<full_page>N</full_page>
+		<header>N</header>
+		<section>Y</section>
+		<footer>N</footer>
+	</type>
+</template>
